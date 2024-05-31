@@ -1,10 +1,12 @@
+import React from 'react';
 import Slider from 'react-slick';
 import './App.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import image1 from './assets/Image1.jpeg';
 import image2 from './assets/Image2.jpeg';
 import image3 from './assets/Image3.jpeg'; // Importe outras imagens que você queira adicionar
 
-// Mova a declaração do settings para fora da função App para evitar a redefinição
 const settings = {
   dots: true,
   infinite: true,
@@ -15,10 +17,10 @@ const settings = {
   autoplaySpeed: 3000,
 };
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
-      <h1>Dc Imob</h1>
+      <h1>RIIS Arquitetura</h1>
       <div className="container">
         <Slider {...settings}>
           <div>

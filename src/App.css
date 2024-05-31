@@ -1,25 +1,28 @@
 /* App.css */
-body {
-  /* background-image: url('./assets/OnImage.jpeg'); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+html, body {
+  height: 100%;
   margin: 0;
-  font-family: 'Inter', sans-serif; /* Aplicando a fonte "Inter" ao corpo do documento */
   color: #000000;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+}
+
+body {
+  background-image: url('./assets/OnImage.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  min-height: 100%;
 }
 
 h1 {
-  font-family: 'Dancing Script', cursive; /* Aplicando a fonte "Dancing Script" ao h1 */
   position: absolute;
   top: 20px;
   left: 20px;
   margin: 0;
+  color: #FFFFFF; /* Adicionando cor ao texto para melhor visibilidade */
 }
 
 .container {
@@ -32,6 +35,10 @@ h1 {
 .container img {
   width: 100%;
   height: auto;
+}
+
+.slick-prev, .slick-next {
+  color: #FFFFFF; /* Ajuste a cor das setas de navegação se necessário */
 }
 
 @media (max-width: 600px) {
