@@ -21,6 +21,7 @@ const App: React.FC = () => {
   return (
     <>
       <h1>RIIS Arquitetura</h1>
+      <p>Casas com 2 quartos, 1 suite. Localizada no jardim Veneza em Ap de Goiânia. conclusão da obra em setembro de 2024</p>
       <div className="container">
         <Slider {...settings}>
           <div>

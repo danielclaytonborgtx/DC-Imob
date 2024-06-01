@@ -19,10 +19,9 @@ body {
 
 h1 {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 15px;
+  left: 15px;
   margin: 0;
-  color: #FFFFFF; /* Adicionando cor ao texto para melhor visibilidade */
 }
 
 .container {
