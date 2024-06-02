@@ -5,7 +5,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import image1 from './assets/Image1.jpeg';
 import image2 from './assets/Image2.jpeg';
-import image3 from './assets/Image3.jpeg'; // Importe outras imagens que você queira adicionar
+import image3 from './assets/Image3.jpeg';
+import image4 from './assets/Image4.jpeg';
 
 const settings = {
   dots: true,
@@ -32,6 +33,9 @@ const App: React.FC = () => {
           </div>
           <div>
             <img src={image3} alt="Descrição da imagem 3" />
+          </div>
+          <div>
+            <img src={image4} alt="Descrição da imagem 4" />
           </div>
         </Slider>
       </div>

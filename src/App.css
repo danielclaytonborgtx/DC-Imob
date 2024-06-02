@@ -3,9 +3,6 @@ html, body {
   height: 100%;
   margin: 0;
   color: #000000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 body {
@@ -13,22 +10,23 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
-  min-height: 100%;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  margin: 0;
+  margin-top: 20px;
 }
 
 .container {
   width: 70%;
   max-width: 600px;
-  margin: 0 auto;
+  margin-top: 20px;
   text-align: center;
+  position: relative;
 }
 
 .container img {
@@ -36,22 +34,19 @@ h1 {
   height: auto;
 }
 
+/* Ajuste a largura do parágrafo para corresponder à largura das imagens */
+.container p {
+  width: 100%;
+  margin-top: 10px; /* Adicione espaço superior para separar o texto das imagens */
+}
+
 .slick-prev, .slick-next {
-  color: #FFFFFF; /* Ajuste a cor das setas de navegação se necessário */
+  color: #FFFFFF;
 }
 
 @media (max-width: 600px) {
   .container {
     width: 90%;
   }
-
-  h1 {
-    top: 10px;
-    left: 10px;
-    font-size: 1.5em;
-  }
-
-  .container {
-    padding: 10px;
-  }
 }
+
