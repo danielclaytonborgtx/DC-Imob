@@ -1,4 +1,3 @@
-/* App.css */
 html, body {
   height: 100%;
   margin: 0;
@@ -12,12 +11,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden; /* Evita rolagem horizontal */
 }
 
 h1 {
   margin-top: 20px;
   text-align: center;
-  font-size: 2rem; /* Tamanho do texto do h1 para dispositivos móveis */
+  font-size: 2rem; /* Tamanho do texto do h1 */
+}
+
+p {
+  text-align: center;
+  margin: 10px 0; /* Adicione espaço superior e inferior */
+  font-size: 1rem; /* Tamanho do texto do parágrafo */
+  padding: 0 10px; /* Adiciona padding para evitar que o texto encoste nas laterais */
 }
 
 .container {
@@ -33,22 +40,27 @@ h1 {
   height: auto;
 }
 
-/* Ajuste a largura do parágrafo para corresponder à largura das imagens */
-.container p {
-  width: 100%;
-  margin-top: 10px; /* Adicione espaço superior para separar o texto das imagens */
-  font-size: 1rem; /* Tamanho do texto do parágrafo para dispositivos móveis */
-}
-
 .slick-prev, .slick-next {
   color: #FFFFFF;
 }
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 1.5rem; /* Tamanho do texto do h1 para dispositivos móveis com tela estreita */
+    font-size: 1.5rem; /* Tamanho do texto do h1 para dispositivos móveis */
   }
+
+  p {
+    font-size: 0.875rem; /* Tamanho do texto do parágrafo para dispositivos móveis */
+    padding: 0 15px; /* Ajusta padding para dispositivos móveis */
+  }
+
   .container {
-    width: 90%;
+    width: 100%; /* Ajusta a largura da container para dispositivos móveis */
+    padding: 0 10px; /* Adiciona padding para evitar que o conteúdo encoste nas laterais */
+  }
+
+  .container img {
+    width: 100%; /* Assegura que as imagens ocupem toda a largura da container */
+    height: auto; /* Assegura que as imagens mantenham a proporção */
   }
 }
