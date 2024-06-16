@@ -1,33 +1,53 @@
 // src/components/SlideShowPage/styles.ts
+
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  background-color: #f0f0f0;
+  /* Adicione estilos para o container principal, se necessário */
+`;
 
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
+export const SlideshowContainer = styled.div`
+  position: relative;
+  max-width: 1000px; /* Ajuste conforme necessário */
+  margin: auto;
+`;
 
-  .each-slide {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
+export const Slide = styled.div`
+  position: relative;
+  text-align: center;
+`;
 
-  .each-slide > div {
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 1.5rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-  }
+export const PrevButton = styled.button`
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  outline: none;
+  padding: 16px;
+  z-index: 1;
+`;
+
+export const NextButton = styled.button`
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  outline: none;
+  padding: 16px;
+  z-index: 1;
+`;
+
+export const Image = styled.img`
+  width: 100%;
+  height: auto;
 `;
