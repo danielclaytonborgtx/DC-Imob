@@ -1,5 +1,3 @@
-// src/components/SlideShowPage/SlideShowPage.tsx
-
 import React, { useState } from "react";
 import { Text } from "../../components/Text";
 import { Title } from "../../components/Title";
@@ -21,17 +19,18 @@ export function SlideShowPage() {
     setCurrentSlide(currentSlide === 0 ? slideImages.length - 1 : currentSlide - 1);
   };
 
-  return (
-    <Container>
-      <Title>Lançamentos</Title>
-      <Text>Casas de 2 quartos sendo uma suíte, arquitetura moderna no jardim Veneza em Aparecida de Goiânia.</Text>
-      <SlideshowContainer>
-        <Slide>
-          <PrevButton onClick={prevSlide}>&#10094;</PrevButton>
-          <Image src={slideImages[currentSlide]} alt={`Slide ${currentSlide + 1}`} />
-          <NextButton onClick={nextSlide}>&#10095;</NextButton>
-        </Slide>
-      </SlideshowContainer>
-    </Container>
+  // Exemplo de uso explícito do React (não necessário na maioria dos casos):
+  return React.createElement(
+    Container,
+    null,
+    React.createElement(Title, null, "Lançamentos"),
+    React.createElement(Text, null, "Casas de 2 quartos sendo uma suíte, arquitetura moderna no jardim Veneza em Aparecida de Goiânia."),
+    React.createElement(SlideshowContainer, null,
+      React.createElement(Slide, null,
+        React.createElement(PrevButton, { onClick: prevSlide }, "\u2B05"),
+        React.createElement(Image, { src: slideImages[currentSlide], alt: `Slide ${currentSlide + 1}` }),
+        React.createElement(NextButton, { onClick: nextSlide }, "\u27A1")
+      )
+    )
   );
 }
