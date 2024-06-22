@@ -1,5 +1,3 @@
-// src/components/SlideShowPage/styles.ts
-
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -50,4 +48,11 @@ export const NextButton = styled.button`
 export const Image = styled.img`
   width: 100%;
   height: auto;
+`;
+
+export const AdditionalImageContainer = styled.div`
+  /* Estilos para a imagem adicional abaixo do slideshow */
+  max-width: 1000px; /* Mesma largura máxima do SlideshowContainer */
+  margin: auto;
+  padding-top: 20px; /* Espaço entre o slideshow e a imagem adicional */
 `;

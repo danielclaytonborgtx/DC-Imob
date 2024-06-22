@@ -4,7 +4,8 @@ import { Title } from "../../components/Title";
 import image2 from "../../assets/Image2.jpeg";
 import image3 from "../../assets/Image3.jpeg";
 import image4 from "../../assets/Image4.jpeg";
-import { Container, SlideshowContainer, Slide, PrevButton, NextButton, Image } from "./styles";
+import additionalImage from "../../assets/Imageplanta.jpeg"; // Imagem adicional
+import { Container, SlideshowContainer, Slide, PrevButton, NextButton, Image, AdditionalImageContainer } from "./styles";
 
 const slideImages = [image2, image3, image4];
 
@@ -19,7 +20,6 @@ export function SlideShowPage() {
     setCurrentSlide(currentSlide === 0 ? slideImages.length - 1 : currentSlide - 1);
   };
 
-  // Exemplo de uso explícito do React (não necessário na maioria dos casos):
   return React.createElement(
     Container,
     null,
@@ -31,6 +31,9 @@ export function SlideShowPage() {
         React.createElement(Image, { src: slideImages[currentSlide], alt: `Slide ${currentSlide + 1}` }),
         React.createElement(NextButton, { onClick: nextSlide }, "\u27A1")
       )
+    ),
+    React.createElement(AdditionalImageContainer, null,
+      React.createElement(Image, { src: additionalImage, alt: "Imagem Adicional" })
     )
   );
 }
