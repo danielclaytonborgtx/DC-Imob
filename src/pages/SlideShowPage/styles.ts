@@ -1,13 +1,15 @@
 import styled from 'styled-components';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export const Container = styled.div`
-  /* Adicione estilos para o container principal, se necessário */
+  /* Estilos para o container principal, se necessário */
 `;
 
 export const SlideshowContainer = styled.div`
   position: relative;
   max-width: 1000px; /* Ajuste conforme necessário */
   margin: auto;
+  margin-top: 20px; /* Exemplo de margem entre o SlideshowContainer e o texto */
 `;
 
 export const Slide = styled.div`
@@ -55,4 +57,28 @@ export const AdditionalImageContainer = styled.div`
   max-width: 1000px; /* Mesma largura máxima do SlideshowContainer */
   margin: auto;
   padding-top: 20px; /* Espaço entre o slideshow e a imagem adicional */
+`;
+
+export const FooterContainer = styled.footer`
+  text-align: center;
+  padding: 10px 0;
+`;
+
+export const ContactText = styled.p`
+  margin-bottom: 10px; /* Espaço maior abaixo do texto */
+  font-size: 1.5rem;
+`;
+
+export const WhatsappLink = styled.a`
+  color: green;
+  font-size: 2rem;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: scale(1.5); /* Aumenta em 50% */
+  }
+`;
+
+export const WhatsappIcon = styled(FaWhatsapp)`
+  vertical-align: middle;
 `;
