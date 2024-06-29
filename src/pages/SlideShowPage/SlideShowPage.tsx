@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from 'react';
+import Slider from 'react-slick';
 import { Title } from "../../components/Title";
 import image2 from "../../assets/Image2.jpeg";
 import image3 from "../../assets/Image3.jpeg";
@@ -8,9 +9,6 @@ import additionalImage from "../../assets/Imageplanta.jpeg"; // Imagem adicional
 import {
   Container,
   SlideshowContainer,
-  Slide,
-  PrevButton,
-  NextButton,
   Image,
   AdditionalImageContainer,
   FooterContainer,
@@ -19,6 +17,8 @@ import {
   WhatsappIcon,
   StyledText
 } from "./styles";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Footer: React.FC = () => {
   return (
@@ -38,14 +38,14 @@ const Footer: React.FC = () => {
 const slideImages = [image2, image3, image4, image5];
 
 export const SlideShowPage: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentSlide((currentSlide + 1) % slideImages.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide(currentSlide === 0 ? slideImages.length - 1 : currentSlide - 1);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
   };
 
   return (
@@ -62,11 +62,13 @@ export const SlideShowPage: React.FC = () => {
         -Sala e cozinha com portas de vidro para integração com a varanda e jardim.
       </StyledText>
       <SlideshowContainer>
-        <Slide>
-          <PrevButton onClick={prevSlide}>&#x2B05;</PrevButton>
-          <Image src={slideImages[currentSlide]} alt={`Slide ${currentSlide + 1}`} />
-          <NextButton onClick={nextSlide}>&#x27A1;</NextButton>
-        </Slide>
+        <Slider {...settings}>
+          {slideImages.map((image, index) => (
+            <div key={index}>
+              <Image src={image} alt={`Slide ${index + 1}`} />
+            </div>
+          ))}
+        </Slider>
       </SlideshowContainer>
       <AdditionalImageContainer>
         <Image src={additionalImage} alt="Imagem Adicional" />
