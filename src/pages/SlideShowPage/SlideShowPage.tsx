@@ -51,7 +51,15 @@ export function SlideShowPage() {
   return (
     <Container>
       <Title>Lançamentos</Title>
-      <Text>Casas de 2 quartos sendo uma suíte, varanda gourmet com churrasqueira, arquitetura moderna no Jardim Veneza em Aparecida de Goiânia.</Text>
+      <Text>Casa térrea com área construída de 80,50m² com 02 quartos (1 suíte), 1 banheiro social, sala e cozinha integradas, área de serviço coberta com estendal, varanda gourmet com churrasqueira, garagem coberta. <br />
+            -Pé direito de 4,00m na sala e cozinha. <br />
+            -Previsão de ampliação de 1 quarto no fundo. <br />
+            -Área verde na frente de 63,00m². <br />
+            -Design moderno. <br />
+            -Pergolado na varanda . <br />
+            -Varanda com fachada sul (baixa insolação durante o dia). <br />
+            -Sala e cozinha com portas de vidro para integração com a varanda e jardim.
+      </Text>
       <SlideshowContainer>
         <Slide>
           <PrevButton onClick={prevSlide}>&#x2B05;</PrevButton>
