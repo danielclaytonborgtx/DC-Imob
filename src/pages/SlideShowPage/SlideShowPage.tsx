@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Text } from "../../components/Text";
+import React, { useState } from "react";
 import { Title } from "../../components/Title";
 import image2 from "../../assets/Image2.jpeg";
 import image3 from "../../assets/Image3.jpeg";
@@ -17,10 +16,11 @@ import {
   FooterContainer,
   ContactText,
   WhatsappLink,
-  WhatsappIcon
+  WhatsappIcon,
+  StyledText
 } from "./styles";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <FooterContainer>
       <ContactText>Entre em contato:</ContactText>
@@ -37,7 +37,7 @@ const Footer = () => {
 
 const slideImages = [image2, image3, image4, image5];
 
-export function SlideShowPage() {
+export const SlideShowPage: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = () => {
@@ -51,15 +51,16 @@ export function SlideShowPage() {
   return (
     <Container>
       <Title>Lançamentos</Title>
-      <Text>Casa térrea com área construída de 80,50m² com 02 quartos (1 suíte), 1 banheiro social, sala e cozinha integradas, área de serviço coberta com estendal, varanda gourmet com churrasqueira, garagem coberta. <br />
-            -Pé direito de 4,00m na sala e cozinha. <br />
-            -Previsão de ampliação de 1 quarto no fundo. <br />
-            -Área verde na frente de 63,00m². <br />
-            -Design moderno. <br />
-            -Pergolado na varanda . <br />
-            -Varanda com fachada sul (baixa insolação durante o dia). <br />
-            -Sala e cozinha com portas de vidro para integração com a varanda e jardim.
-      </Text>
+      <StyledText>
+        Casa térrea com área construída de 80,50m² com 02 quartos (1 suíte), 1 banheiro social, sala e cozinha integradas, área de serviço coberta com estendal, varanda gourmet com churrasqueira, garagem coberta. <br />
+        -Pé direito de 4,00m na sala e cozinha. <br />
+        -Previsão de ampliação de 1 quarto no fundo. <br />
+        -Área verde na frente de 63,00m². <br />
+        -Design moderno. <br />
+        -Pergolado na varanda . <br />
+        -Varanda com fachada sul (baixa insolação durante o dia). <br />
+        -Sala e cozinha com portas de vidro para integração com a varanda e jardim.
+      </StyledText>
       <SlideshowContainer>
         <Slide>
           <PrevButton onClick={prevSlide}>&#x2B05;</PrevButton>
@@ -75,4 +76,4 @@ export function SlideShowPage() {
   );
 }
 
-export default SlideShowPage; // Exportar o componente por padrão se necessário
+export default SlideShowPage;

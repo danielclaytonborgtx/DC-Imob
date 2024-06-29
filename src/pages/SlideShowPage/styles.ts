@@ -72,6 +72,7 @@ export const ContactText = styled.p`
 export const WhatsappLink = styled.a`
   color: green;
   font-size: 2rem;
+  display: inline-block; /* Adiciona a capacidade de transformar */
   transition: transform 0.3s;
 
   &:hover {
@@ -81,4 +82,10 @@ export const WhatsappLink = styled.a`
 
 export const WhatsappIcon = styled(FaWhatsapp)`
   vertical-align: middle;
+`;
+
+export const StyledText = styled.p`
+  margin: 0 20px; /* Adiciona margem lateral */
+  font-size: 1rem; /* Adiciona estilo ao texto */
+  line-height: 1.5; /* Adiciona espaçamento entre linhas */
 `;
